@@ -1,1 +1,1 @@
-rspec spec/lib/human_spec.rb
+rspec spec/lib/Game_spec.rb
