@@ -13,11 +13,14 @@ class Game
     frame = 0
     
     10.times {
-      if @rolls[frame] + @rolls[frame + 1] == 10 then
-        score = score + 10 + @rolls[frame + 2]
+      if @rolls[frame] == 10 then
+        score += 10 + @rolls[frame + 1] + @rolls[frame + 2]
+        frame += 1
+      elsif @rolls[frame] + @rolls[frame + 1] == 10 then
+        score += 10 + @rolls[frame + 2]
         frame += 2
       else
-        score = score + @rolls[frame] + @rolls[frame + 1]
+        score += @rolls[frame] + @rolls[frame + 1]
         frame += 2
       end
     }
